@@ -1,0 +1,129 @@
+/* 明亮模式 */
+:root {
+  --up: #e5323e;
+  --down: #13a34a;
+  --app-bg: #eef0f3;
+  --panel-bg: #ffffff;
+  --panel-border: #e1e4ea;
+  --header-bg: #f5f7fa;
+  --text-color: #303133;
+  --text-strong: #1f2329;
+  --muted-color: #8a8f99;
+  /* 次要文字：比 muted 更醒目，用于顶栏账号信息等 */
+  --text-secondary: #606266;
+  --row-hover-bg: #f0f4fa;
+  --row-active-bg: #dde8f8;
+  --code-color: #a8650a;
+  --divider-color: #dcdfe6;
+  --atm-bg: #fff4dc;
+  --mask-bg: rgba(255, 255, 255, 0.5);
+  --login-bg: radial-gradient(circle at 30% 20%, #dbe6f7 0%, #eef0f3 60%);
+  --card-bg: #ffffff;
+  --card-border: #e1e4ea;
+  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --chart-grid: #edf0f4;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* 暗夜模式（Element Plus 的暗色变量同样挂在 html.dark 上） */
+html.dark {
+  --up: #f04864;
+  --down: #2fc25b;
+  --app-bg: #0b0b0c;
+  --panel-bg: #141414;
+  --panel-border: #2a2a2a;
+  --header-bg: #1d1e1f;
+  --text-color: #d0d3d9;
+  --text-strong: #e8eaed;
+  --muted-color: #7d828c;
+  --text-secondary: #b4b9c2;
+  --row-hover-bg: #23262b;
+  --row-active-bg: #2b3240;
+  --code-color: #e6c86e;
+  --divider-color: #333333;
+  --atm-bg: #22283a;
+  --mask-bg: rgba(0, 0, 0, 0.3);
+  --login-bg: radial-gradient(circle at 30% 20%, #1c2433 0%, #0b0b0c 60%);
+  --card-bg: #16181c;
+  --card-border: #2a2d33;
+  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --chart-grid: #1f2226;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  background: var(--app-bg);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.up {
+  color: var(--up) !important;
+}
+
+.down {
+  color: var(--down) !important;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  font-family: 'Consolas', 'SFMono-Regular', 'Menlo', monospace;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+
+.panel-title {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--panel-border);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.panel-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.muted {
+  color: var(--muted-color);
+}
+
+/* 表格紧凑化，行情表行高接近客户端 */
+.el-table {
+  --el-table-bg-color: var(--panel-bg);
+  --el-table-tr-bg-color: var(--panel-bg);
+  --el-table-header-bg-color: var(--header-bg);
+  --el-table-row-hover-bg-color: var(--row-hover-bg);
+  --el-table-current-row-bg-color: var(--row-active-bg);
+  font-size: 12px;
+}
+
+.el-table .cell {
+  padding: 0 6px;
+  white-space: nowrap;
+}
+
+.el-table td.el-table__cell,
+.el-table th.el-table__cell {
+  padding: 2px 0;
+}

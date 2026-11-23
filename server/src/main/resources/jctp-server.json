@@ -1,0 +1,50 @@
+{
+  "port": 8080,
+  "webDir": "../web/dist",
+  "flowPath": "ctp-flow",
+  "ctpTimeout": "PT30S",
+  "counters": [
+    {
+      "id": "local-sim",
+      "name": "本地模拟柜台（模拟行情与撮合）",
+      "brokerId": "9999",
+      "simulated": true
+    },
+    {
+      "id": "simnow-1",
+      "name": "SimNow 第一套（交易时段）",
+      "brokerId": "9999",
+      "tdFront": "tcp://182.254.243.31:30001",
+      "mdFront": "tcp://182.254.243.31:30011",
+      "appId": "simnow_client_test",
+      "authCode": "0000000000000000"
+    },
+    {
+      "id": "simnow-2",
+      "name": "SimNow 第二套（交易时段）",
+      "brokerId": "9999",
+      "tdFront": "tcp://182.254.243.31:30002",
+      "mdFront": "tcp://182.254.243.31:30012",
+      "appId": "simnow_client_test",
+      "authCode": "0000000000000000"
+    },
+    {
+      "id": "simnow-3",
+      "name": "SimNow 第三套（交易时段）",
+      "brokerId": "9999",
+      "tdFront": "tcp://182.254.243.31:30003",
+      "mdFront": "tcp://182.254.243.31:30013",
+      "appId": "simnow_client_test",
+      "authCode": "0000000000000000"
+    },
+    {
+      "id": "simnow-7x24",
+      "name": "SimNow 7x24（非交易时段）",
+      "brokerId": "9999",
+      "tdFront": "tcp://182.254.243.31:40001",
+      "mdFront": "tcp://182.254.243.31:40011",
+      "appId": "simnow_client_test",
+      "authCode": "0000000000000000"
+    }
+  ]
+}

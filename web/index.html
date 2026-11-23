@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JCTP 期货交易</title>
+    <script>
+      // 应用加载前确定明/暗主题（缺省暗色），避免刷新时闪烁；键名与 src/stores/theme.ts 一致
+      ;(function () {
+        var theme = localStorage.getItem('jctp.theme') === 'light' ? 'light' : 'dark'
+        if (theme === 'dark') document.documentElement.classList.add('dark')
+        document.documentElement.style.colorScheme = theme
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

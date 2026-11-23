@@ -1,0 +1,16 @@
+jctp
+Copyright 2026
+
+本项目代码以 Apache License 2.0 授权，见 LICENSE。
+
+以下第三方内容不属于本项目，版权归各自所有者，不受本项目许可证约束：
+
+1. CTP 原生库与头文件
+   core/src/main/resources/jctpv6v*x64api/ 下的 thostmduserapi_se、thosttraderapi_se（.dll/.so）
+   及 ThostFtdc*.h 等文件，版权归上海期货信息技术有限公司（SFIT）所有。
+   随项目附带仅为方便开发与测试，使用须遵守其官方条款：http://www.sfit.com.cn/
+
+2. KLineChart Pro（https://github.com/klinecharts/pro），Apache License 2.0
+   web/src/utils/drawingOverlays.ts、web/src/utils/drawingIcons.ts、web/src/utils/indicators.ts
+   及 web/src/components/DrawingBar.vue 等网页端画图工具栏、画图扩展、指标与设置的交互与配置移植自该项目，
+   文件头部注明了出处。
